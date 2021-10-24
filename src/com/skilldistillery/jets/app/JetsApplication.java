@@ -63,7 +63,7 @@ public class JetsApplication {
 		int userChoice = 0;
 		boolean runApp = true;
 		System.out.print("Please enter a number for the option you would like to do: ");
-		userChoice = keyBoard.nextInt();
+		userChoice = getUserInt();
 		keyBoard.nextLine();
 		switch(userChoice) {
 		case 1:
@@ -247,7 +247,7 @@ public class JetsApplication {
 		System.out.println("Welcome to the custom plane builder.");
 		System.out.println("Your able to build an additional Fighter, CargoPlane, or Passenger Plane to the fleet");
 		System.out.println("Please enter the number for which jet to make: \n1.Fighter Jet \n2.Cargo Jet\n3.Passenger Jet");
-		userChoice = keyBoard.nextInt();
+		userChoice = getUserInt();
 		keyBoard.nextLine();
 		switch(userChoice){
 			case 1:
@@ -277,13 +277,13 @@ public class JetsApplication {
 		System.out.println("Please enter the model of Jet: ");
 		planeModel = keyBoard.nextLine();
 		System.out.println("Please enter the Mach Speed of jet: ");
-		planeMachSpeed = keyBoard.nextDouble();
+		planeMachSpeed = getUserDouble();
 		keyBoard.nextLine();
 		System.out.println("Please enter the Jets range of flight in  whole miles: ");
-		planeRange = keyBoard.nextInt();
+		planeRange = getUserInt();
 		keyBoard.nextLine();
 		System.out.println("Please enter the price of the Jet: ");
-		planePrice = keyBoard.nextLong();
+		planePrice = getUserLong();
 		keyBoard.nextLine();
 		if(jetType.equals("Fighter")) {
 			Jets fJet = new FighterJet(planeModel,planeMachSpeed,planeRange,planePrice );
@@ -301,4 +301,62 @@ public class JetsApplication {
 	}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public int getUserInt() {
+		int userInt = 0;
+		boolean correctInput = false;
+		do {
+			if(keyBoard.hasNextInt()) {
+				userInt = keyBoard.nextInt();
+				correctInput = true;
+			}
+			else {
+				keyBoard.nextLine();
+				System.out.println("Invalid input please enter a whole number again.");
+			}
+			
+		}while(!correctInput);
+		
+		
+		return userInt;
+	}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public double getUserDouble() {
+		double userDouble = 0;
+		boolean correctInput = false;
+		do {
+			if (keyBoard.hasNextDouble()) {
+				userDouble = keyBoard.nextDouble();
+				correctInput = true;
+			} else {
+				keyBoard.nextLine();
+				System.out.println("Invalid input please enter a whole number or decimal again.");
+			}
+
+		} while (!correctInput);
+
+		return userDouble;
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	public long getUserLong() {
+		long userLong = 0;
+		boolean correctInput = false;
+		do {
+			if (keyBoard.hasNextLong()) {
+				userLong = keyBoard.nextLong();
+				correctInput = true;
+			} else {
+				keyBoard.nextLine();
+				System.out.println("Invalid input please enter a Long number again.");
+			}
+
+		} while (!correctInput);
+
+		return userLong;
+	}
+	
 }
