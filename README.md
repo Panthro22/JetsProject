@@ -1,26 +1,25 @@
-# JetsProject
+# *JetsProject*
 
 ## Description
-JetsApplication launches the app.
 * This application creates an airfield, which is loaded up with 8 jets of two different types(Fighter, or  Cargo).
 * The app has nine menu options:
-  * List Fleet.
+  * *List Fleet.*
     * This displays all the information of the Jets in the airfield.
-  * Fly all jets.
+  * *Fly all jets.*
     * Similar to one yet, also give you calculation of the jets flight time.
-  * View fastest jet.
+  * *View fastest jet.*
     * Goes through the airfield to find the jet with the fastest speed.
-  * View jet with longest range.
+  * *View jet with longest range.*
     * Looks to see who in the airfield can go the extra mile!
-  * Load all cargo planes.
+  * *Load all cargo planes.*
     * Finds all Cargo planes and loads them up.
-  *  Dogfight.
+  * *Dogfight*.
     * All fighter jets engage and disengage with the enemy.
-  *  Add jet to Fleet.
+  * *Add jet to Fleet.*
     * Allows the airfield to gain additional planes, whether real or made up from user input.
-  *  remove a jet from Fleet.
+  *  *remove a jet from Fleet.*
     * allows user to remove a jet via its Model name.
-  *  Quit (Shutdown Application)
+  *  *Quit* (Shutdown Application)
 
 #### methods to check correct input.
   * Created methods to check that user was doing correct inputs as far as,: Integers, Doubles, Longs.
