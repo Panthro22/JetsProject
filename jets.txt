@@ -1,0 +1,8 @@
+Fighter, F-14 Tomcat,2.34,1841,38000000
+Fighter, F/A-18 Hornet,1.8,2069,66900000
+Fighter, F-22 Raptor,2.25,1850,150000000
+Fighter, SR-71 BlackBird,3.3,2000,34000000
+Fighter, F-15 Eagle,2.4,2400,31100000
+Cargo, C-17 Globemaster,0.74,2784,220000000
+Cargo, C-5 Galaxy,0.77,7274,167700000
+Cargo, C-130 Hercules,0.57,7000,14000000
